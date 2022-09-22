@@ -9,4 +9,4 @@ adara/cache/*
 !adara/cahe/.gitkeep
 /adara/media/
 !adara/media/.gitkeep
-
+/adara/debug.log
