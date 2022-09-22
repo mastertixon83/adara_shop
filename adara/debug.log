@@ -1,0 +1,36 @@
+[DEBUG -2022-09-22 19:53:36,945 - views - views.py] - None
+[DEBUG -2022-09-22 19:54:24,832 - views - views.py] - 2
+[DEBUG -2022-09-22 19:54:27,675 - views - views.py] - 1
+[DEBUG -2022-09-22 19:54:27,684 - views - views.py] - <QuerySet [<Size: 40 - xl>, <Size: 42 - xxl>, <Size: 46 - ml>]>
+[DEBUG -2022-09-22 19:54:35,161 - views - views.py] - 2
+[DEBUG -2022-09-22 19:55:37,426 - views - views.py] - 2
+[DEBUG -2022-09-22 19:55:45,072 - views - views.py] - 1
+[DEBUG -2022-09-22 19:55:45,084 - views - views.py] - <QuerySet [<Size: 40 - xl>, <Size: 42 - xxl>, <Size: 46 - ml>]>
+[DEBUG -2022-09-22 19:56:29,545 - views - views.py] - 2
+[DEBUG -2022-09-22 19:56:35,300 - views - views.py] - 1
+[DEBUG -2022-09-22 19:56:35,308 - views - views.py] - <QuerySet [<Size: 40 - xl>, <Size: 42 - xxl>, <Size: 46 - ml>]>
+[DEBUG -2022-09-22 19:56:38,874 - views - views.py] - 2
+[DEBUG -2022-09-22 19:57:19,328 - views - views.py] - 2
+[DEBUG -2022-09-22 19:57:24,054 - views - views.py] - 1
+[DEBUG -2022-09-22 19:57:24,063 - views - views.py] - <QuerySet [<Size: 40 - xl>, <Size: 42 - xxl>, <Size: 46 - ml>]>
+[DEBUG -2022-09-22 19:57:26,772 - views - views.py] - 2
+[DEBUG -2022-09-22 19:58:27,747 - views - views.py] - 2
+[DEBUG -2022-09-22 19:58:35,852 - views - views.py] - 1
+[DEBUG -2022-09-22 19:58:35,866 - views - views.py] - <QuerySet [<Size: 40 - xl>, <Size: 42 - xxl>, <Size: 46 - ml>]>
+[DEBUG -2022-09-22 19:58:39,419 - views - views.py] - 2
+[DEBUG -2022-09-22 20:00:28,140 - views - views.py] - 2
+[DEBUG -2022-09-22 20:00:32,289 - views - views.py] - 1
+[DEBUG -2022-09-22 20:00:32,299 - views - views.py] - <QuerySet [<Size: 40 - xl>, <Size: 42 - xxl>, <Size: 46 - ml>]>
+[DEBUG -2022-09-22 20:00:35,491 - views - views.py] - 2
+[DEBUG -2022-09-22 20:02:15,435 - views - views.py] - 2
+[DEBUG -2022-09-22 20:05:47,789 - views - views.py] - 2
+[DEBUG -2022-09-22 20:05:53,368 - views - views.py] - 1
+[DEBUG -2022-09-22 20:05:53,378 - views - views.py] - <QuerySet [<Size: 40 - xl>, <Size: 42 - xxl>, <Size: 46 - ml>]>
+[DEBUG -2022-09-22 20:05:56,903 - views - views.py] - 2
+[DEBUG -2022-09-22 20:06:33,671 - views - views.py] - 2
+[DEBUG -2022-09-22 20:06:37,125 - views - views.py] - 1
+[DEBUG -2022-09-22 20:06:37,136 - views - views.py] - <QuerySet [<Size: 40 - xl>, <Size: 42 - xxl>, <Size: 46 - ml>]>
+[DEBUG -2022-09-22 20:08:35,789 - views - views.py] - 2
+[DEBUG -2022-09-22 20:08:54,951 - views - views.py] - 1
+[DEBUG -2022-09-22 20:08:54,960 - views - views.py] - <QuerySet [<Size: 40 - xl>, <Size: 42 - xxl>, <Size: 46 - ml>]>
+[DEBUG -2022-09-22 20:08:57,602 - views - views.py] - 2

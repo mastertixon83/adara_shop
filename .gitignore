@@ -1,0 +1,12 @@
+.idea/
+tmp/
+venv/
+/adara/adsman/migrations/*
+!adara/adsman/migrations/.gitkeep
+/adara/shop/migrations/*
+!adara/shop/migrations/.gitkeep
+adara/cache/*
+!adara/cahe/.gitkeep
+/adara/media/
+!adara/media/.gitkeep
+
