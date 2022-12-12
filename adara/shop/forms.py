@@ -7,10 +7,11 @@ class AdminProductForm(forms.ModelForm):
 
     class Meta:
         model = Product
-        fields = ('name', 'category', 'gender', 'size_cheme', 'size', 'price', 'discount', 'description', 'slug')
-        #TODO: Добавить инициализацию формы
+        fields = ('name', 'gender', 'category', 'size_cheme', 'size', 'price', 'discount', 'description', 'slug')
+        # TODO: Добавить инициализацию формы
         widgets = {
-            'gender': forms.Select(attrs={'class': 'form-control'})
+            'gender': forms.Select(attrs={'class': 'form-control'}),
+            'size': forms.SelectMultiple(attrs={'class': 'form-control chosen', 'data-placeholder': 'Select group'})
         }
 
     class Media:
