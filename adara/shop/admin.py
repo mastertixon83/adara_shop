@@ -33,7 +33,7 @@ class SizeChemeAdmin(admin.ModelAdmin):
 
     prepopulated_fields = {"slug": ("name",)}
 
-    list_display = ['pk', 'name']
+    list_display = ['pk', 'name', 'gender']
     list_display_links = ['pk', 'name']
 
 
@@ -46,7 +46,7 @@ class SizeAdmin(admin.ModelAdmin):
 
     prepopulated_fields = prepopulated_fields = {"slug": ("rus_size", "int_size")}
 
-    list_display = ['pk', 'rus_size', 'int_size']
+    list_display = ['pk', 'rus_size', 'int_size', 'size_cheme']
     list_display_links = ['pk', 'rus_size', 'int_size']
 
 

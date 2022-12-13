@@ -37,6 +37,9 @@ class Category(MPTTModel):
 
 class SizeCheme(models.Model):
     """Класс модели схемы размеров"""
+    category = models.ForeignKey(
+        Category, on_delete=models.CASCADE, related_name='categoryes'
+    )
     name = models.CharField(max_length=50)
     slug = models.SlugField(unique=True)
     gender = models.CharField(max_length=1, choices=GENDERS, blank=True)

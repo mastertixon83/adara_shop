@@ -6,3 +6,7 @@ from rest_framework.renderers import JSONRenderer
 class SizeSerializer(serializers.Serializer):
     rus_size = serializers.CharField(max_length=10)
     int_size = serializers.CharField(max_length=10)
+
+
+class ChemesSerializer(serializers.Serializer):
+    name = serializers.CharField(max_length=50)

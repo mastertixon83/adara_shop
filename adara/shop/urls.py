@@ -12,5 +12,6 @@ urlpatterns = [
     # path('', cache_page(15 * 60)(HomeView.as_view()), name='home'),
     # path('', HomeView.as_view(), name='home'),
     path('test/', tester, name='test_url'),
+    path('gender/', gender_change, name='gender_url'),
     path('', top_viev, name='home')
 ]

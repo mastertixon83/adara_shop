@@ -2,7 +2,7 @@ from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView, CreateView
 from .models import Category, Product, SizeCheme, Size
-from .serializers import SizeSerializer
+from .serializers import SizeSerializer, ChemesSerializer
 import json
 
 from rest_framework.response import Response
@@ -24,14 +24,38 @@ def tester(request):
     if is_ajax(request=request):
         if request.method == 'GET':
             id_size_cheme = request.GET.get('id_size_cheme')
-            logger.debug(id_size_cheme)
+            gender = request.GET.get('gender')
+
             # TODO: Сформировать список размеров
             sizes = SizeCheme.objects.get(pk=id_size_cheme).sizes.all()
+            logger.debug(sizes)
             if sizes:
-                logger.debug(sizes)
                 serializedData = SizeSerializer(sizes, many=True).data
             else:
                 msg = f'No sizes for {SizeCheme.objects.get(pk=id_size_cheme).name}'
+                serializedData = {'message': msg}
+    else:
+        logger.debug('no ajax')
+
+    return JsonResponse(serializedData, safe=False)
+
+
+@api_view(('GET',))
+@renderer_classes((TemplateHTMLRenderer, JSONRenderer))
+def gender_change(request):
+    if is_ajax(request=request):
+        if request.method == 'GET':
+            gender = request.GET.get('gender')
+            categories = Category.objects.filter(gender=gender)
+            chemes = SizeCheme.objects.filter(gender=gender)
+
+            logger.debug(chemes)
+            logger.debug(categories)
+            if chemes:
+                serializedData = ChemesSerializer(chemes, many=True).data
+
+            else:
+                msg = f'No sizes for {gender}'
                 serializedData = {'message': msg}
     else:
         logger.debug('no ajax')
