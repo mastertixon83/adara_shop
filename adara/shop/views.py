@@ -28,7 +28,6 @@ def tester(request):
 
             # TODO: Сформировать список размеров
             sizes = SizeCheme.objects.get(pk=id_size_cheme).sizes.all()
-            logger.debug(sizes)
             if sizes:
                 serializedData = SizeSerializer(sizes, many=True).data
             else:
@@ -49,11 +48,9 @@ def gender_change(request):
             categories = Category.objects.filter(gender=gender)
             chemes = SizeCheme.objects.filter(gender=gender)
 
-            logger.debug(chemes)
-            logger.debug(categories)
             if chemes:
                 serializedData = ChemesSerializer(chemes, many=True).data
-
+                logger.debug(serializedData+serializedData)
             else:
                 msg = f'No sizes for {gender}'
                 serializedData = {'message': msg}

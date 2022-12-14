@@ -4,7 +4,6 @@ $(document).ready(function () {
   $('#id_gender').change(function () { // отслеживаю событие выбора размерной сетки
       // переменные
     document.getElementById('id_size').innerHTML='';
-    document.getElementById('id_size_cheme').innerHTML='';
 
     var gender = $('#id_gender').val();
 
@@ -23,11 +22,11 @@ $(document).ready(function () {
                 for(i=0; i<data.length; i++)
 
                 {
-                    console.log(data[i].rus_size);
                     var opt = document.createElement('option');
                     opt.value = i+1;
                     opt.innerHTML = data[i].name;
                     selections.appendChild(opt);
+
 //                    selections.options.add(data[i].rus_size)
                     //<option value="1" selected="">40 - xl</option>
                 }
