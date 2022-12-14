@@ -57,9 +57,9 @@ class CategoryAdmin(DraggableMPTTAdmin):
     save_as = True
     save_as_continue = True
 
-    prepopulated_fields = {"slug": ("name",)}
+    prepopulated_fields = {"slug": ("name")}
 
-    list_display = ['tree_actions', 'indented_title', 'pk', 'gender', 'slug']
+    list_display = ['gender', 'tree_actions', 'indented_title', 'pk', 'slug']
     list_display_links = ['pk', 'indented_title']
 
 

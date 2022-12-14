@@ -2,7 +2,7 @@ from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView, CreateView
 from .models import Category, Product, SizeCheme, Size
-from .serializers import SizeSerializer, ChemesSerializer
+from .serializers import SizeSerializer, ChemeSerializer, CategorySerializer
 import json
 
 from rest_framework.response import Response
@@ -13,6 +13,8 @@ import logging
 
 logger = logging.getLogger('main')
 
+
+# Model.object.filter(Q(color=color[0]) && Q(color=color[1]) )
 
 def is_ajax(request):
     return request.META.get('HTTP_X_REQUESTED_WITH') == 'XMLHttpRequest'
@@ -47,13 +49,16 @@ def gender_change(request):
             gender = request.GET.get('gender')
             categories = Category.objects.filter(gender=gender)
             chemes = SizeCheme.objects.filter(gender=gender)
-
-            if chemes:
-                serializedData = ChemesSerializer(chemes, many=True).data
-                logger.debug(serializedData+serializedData)
-            else:
-                msg = f'No sizes for {gender}'
-                serializedData = {'message': msg}
+            categories_sd = CategorySerializer(categories, many=True).data
+            chemes_sd = ChemeSerializer(chemes, many=True).data
+            serializedData = [categories_sd, chemes_sd]
+            logger.debug(serializedData)
+            # if chemes:
+            #     serializedData = ChemeSerializer(chemes, many=True).data
+            #     logger.debug(serializedData)
+            # else:
+            #     msg = f'No sizes for {gender}'
+            #     serializedData = {'message': msg}
     else:
         logger.debug('no ajax')
 

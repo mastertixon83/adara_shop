@@ -16,6 +16,7 @@ $(document).ready(function () {
             data        : send_data, // данные для отправки на сервер
             dataType    : 'JSON', // какой тип данных ожидаем от сервера
           success: function (data) { // если успешно, то
+               console.log(data[1][0].name)
              if (data.length > 0) {
                 var selections = document.getElementById('id_size_cheme');
                 selections.innerHTML='';
@@ -24,7 +25,7 @@ $(document).ready(function () {
                 {
                     var opt = document.createElement('option');
                     opt.value = i+1;
-                    opt.innerHTML = data[i].name;
+                    opt.innerHTML = data[1][i].name;
                     selections.appendChild(opt);
 
 //                    selections.options.add(data[i].rus_size)

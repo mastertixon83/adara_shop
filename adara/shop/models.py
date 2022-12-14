@@ -19,10 +19,11 @@ GENDERS = [
 
 class Category(MPTTModel):
     """Класс модели категорий товаров"""
+    # gender = models.CharField(max_length=1, choices=GENDERS, blank=True)
     name = models.CharField(max_length=50, unique=True)
     parent = TreeForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='children')
     slug = models.SlugField(unique=True)
-    gender = models.CharField(max_length=1, choices=GENDERS, blank=True)
+
 
     def __str__(self):
         return self.name

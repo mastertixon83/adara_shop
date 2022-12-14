@@ -8,5 +8,9 @@ class SizeSerializer(serializers.Serializer):
     int_size = serializers.CharField(max_length=10)
 
 
-class ChemesSerializer(serializers.Serializer):
+class ChemeSerializer(serializers.Serializer):
+    name = serializers.CharField(max_length=50)
+
+
+class CategorySerializer(serializers.Serializer):
     name = serializers.CharField(max_length=50)
